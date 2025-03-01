@@ -9,5 +9,13 @@
   },
   "action": {
     "default_popup": "popup.html"
+  },
+  "commands": {
+    "open-clips": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K"
+      },
+      "description": "Open Clips Page"
+    }
   }
 }

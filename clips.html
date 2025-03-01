@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Clips</title>
+    <style>
+      body {
+        width: 800px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+      }
+      .url-group {
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+      }
+      .url-header {
+        margin: 0 0 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+        font-size: 1.2em;
+      }
+      .clip {
+        border: 1px solid #ddd;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: white;
+      }
+      .clip-text {
+        margin: 10px 0;
+      }
+      .clip-meta {
+        color: #666;
+        font-size: 0.9em;
+      }
+      .clip-url {
+        color: #0066cc;
+        text-decoration: none;
+        word-break: break-all;
+      }
+      .clip-url:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Saved Clips</h1>
+    <div id="clips-container"></div>
+    <script src="clips.js"></script>
+  </body>
+</html>

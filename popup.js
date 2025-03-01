@@ -9,3 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.getElementById("viewClips").addEventListener("click", () => {
+  chrome.tabs.create({ url: "clips.html" });
+});
