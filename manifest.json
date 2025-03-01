@@ -13,6 +13,12 @@
       "js": ["mark.min.js", "contentScript.js"],
       "css": ["highlight.css"],
       "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["youtubeContent.js"],
+      "css": ["highlight.css"],
+      "run_at": "document_end"
     }
   ],
   "action": {
