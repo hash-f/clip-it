@@ -1,0 +1,171 @@
+body {
+  width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar button.active {
+  background: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.toolbar button:hover {
+  background: #f8f9fa;
+}
+
+.video-clip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clip-time-range {
+  font-family: monospace;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.url-group {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.url-header {
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2em;
+}
+
+.clip {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 4px;
+  background: white;
+  position: relative;
+}
+
+.clip-content {
+  margin-bottom: 10px;
+}
+
+.clip-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.clip-text {
+  margin: 10px 0;
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+.clip-meta {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.clip-url {
+  color: #0066cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.clip-url:hover {
+  text-decoration: underline;
+}
+
+.clip-time-range {
+  font-family: monospace;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.clips-group {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.group-header {
+  margin: 0 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2em;
+}
+
+.group-header a {
+  color: #0066cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.group-header a:hover {
+  text-decoration: underline;
+}
+
+.clip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: #ffd6d6;
+  border: none;
+  color: #000000;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #fee;
+  color: #f66;
+}

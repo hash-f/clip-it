@@ -31,5 +31,11 @@
       },
       "description": "Open Clips Page"
     }
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["highlight.css", "clips.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

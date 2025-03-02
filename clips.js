@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="clip-content">
             <div class="clip-header">
               <div class="clip-title">${clip.title}</div>
-              <button class="delete-btn" data-clip-id="${clip.id}">×</button>
+              <button class="delete-btn" data-clip-id="${clip.id}">Del</button>
             </div>
             <div class="clip-time-range">
               ${formatTime(clip.startTime)} - ${
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="clip">
           <div class="clip-header">
             <div class="clip-text">${clip.content}</div>
-            <button class="delete-btn" data-clip-id="${clip.id}">×</button>
+            <button class="delete-btn" data-clip-id="${clip.id}">Del</button>
           </div>
           <div class="clip-meta">
             <div>Date: ${formatDate(clip.timestamp)}</div>

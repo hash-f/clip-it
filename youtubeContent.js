@@ -89,12 +89,18 @@ class VideoClipper {
   }
 
   async updateClip(clipData) {
-    const result = await chrome.storage.local.get({ clips: { video: [] } });
+    const result = await chrome.storage.local.get({ clips: [] });
     const clips = result.clips;
-    const index = clips.video.findIndex((clip) => clip.id === clipData.id);
+    const index = clips.findIndex((clip) => clip.id === clipData.id);
     if (index !== -1) {
-      clips.video[index] = clipData;
+      clips[index] = clipData;
       await chrome.storage.local.set({ clips });
+      // Update local videoClips array
+      const videoId = this.getVideoId();
+      this.videoClips = clips.filter(
+        (clip) => clip.type === "video" && clip.videoId === videoId
+      );
+      this.updateClipsCount();
     }
   }
 }
