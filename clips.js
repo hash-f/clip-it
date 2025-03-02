@@ -91,7 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return `
         <div class="clip video-clip">
           <div class="clip-content">
-            <div class="clip-title">${clip.title}</div>
+            <div class="clip-header">
+              <div class="clip-title">${clip.title}</div>
+              <button class="delete-btn" data-clip-id="${clip.id}">×</button>
+            </div>
             <div class="clip-time-range">
               ${formatTime(clip.startTime)} - ${
         clip.endTime ? formatTime(clip.endTime) : "In Progress"
@@ -106,7 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       return `
         <div class="clip">
-          <div class="clip-text">${clip.content}</div>
+          <div class="clip-header">
+            <div class="clip-text">${clip.content}</div>
+            <button class="delete-btn" data-clip-id="${clip.id}">×</button>
+          </div>
           <div class="clip-meta">
             <div>Date: ${formatDate(clip.timestamp)}</div>
           </div>
@@ -160,6 +166,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     clipsContainer.innerHTML = clipsHTML;
+
+    // Add event listeners to delete buttons after rendering
+    document.querySelectorAll(".delete-btn").forEach((button) => {
+      button.addEventListener("click", async (e) => {
+        const clipId = e.target.dataset.clipId;
+        try {
+          const result = await chrome.storage.local.get({ clips: [] });
+          const clips = result.clips.filter((clip) => clip.id !== clipId);
+          await chrome.storage.local.set({ clips });
+          allClips = clips; // Update local state
+          displayClips();
+        } catch (e) {
+          console.error("Error deleting clip:", e);
+        }
+      });
+    });
   }
 
   // Event Listeners

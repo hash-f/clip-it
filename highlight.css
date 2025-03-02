@@ -83,6 +83,8 @@ h2 {
 
 .clip-text {
   margin: 10px 0;
+  flex: 1;
+  overflow-wrap: break-word;
 }
 
 .clip-meta {
@@ -131,5 +133,28 @@ h2 {
 
 .group-header a:hover {
   text-decoration: underline;
+}
+
+.clip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: #fee;
+  color: #f66;
 } 
 
