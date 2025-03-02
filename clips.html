@@ -8,6 +8,37 @@
         margin: 20px auto;
         font-family: Arial, sans-serif;
       }
+      .toolbar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        align-items: center;
+      }
+      .search-box {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .toolbar button {
+        padding: 8px 16px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .toolbar button.active {
+        background: #e9ecef;
+        border-color: #dee2e6;
+      }
+      .toolbar button:hover {
+        background: #f8f9fa;
+      }
       .url-group {
         margin-bottom: 30px;
         padding: 15px;
@@ -45,7 +76,15 @@
     </style>
   </head>
   <body>
-    <h1>My Saved Clips</h1>
+    <div class="toolbar">
+      <input
+        type="text"
+        class="search-box"
+        placeholder="Search in title, text, or URL..."
+      />
+      <button id="sortDate" class="active">By Date</button>
+      <button id="sortUrl">By URL</button>
+    </div>
     <div id="clips-container"></div>
     <script src="clips.js"></script>
   </body>

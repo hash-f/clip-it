@@ -13,9 +13,9 @@ class VideoClipper {
   }
 
   async loadExistingClips() {
-    const result = await chrome.storage.local.get({ clips: { video: [] } });
-    this.videoClips = result.clips.video.filter(
-      (clip) => clip.videoId === this.getVideoId()
+    const result = await chrome.storage.local.get({ clips: [] });
+    this.videoClips = result.clips.filter(
+      (clip) => clip.type === "video" && clip.videoId === this.getVideoId()
     );
   }
 
